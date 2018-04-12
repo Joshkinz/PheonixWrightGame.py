@@ -14,6 +14,7 @@ screen = pygame.display.set_mode((width, height)) #Draws window
 
 #--------Main Loop--------
 while gameLoop:
+	screen.fill(0) #Clear the screen before drawing it again.
 	#----Main event loop
 	for event in pygame.event.get(): #User did something
 		if event.type == pygame.QUIT(): #If User closed program then...
