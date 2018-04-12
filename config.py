@@ -1,0 +1,9 @@
+#CONTROLS
+GO_UP = W
+GO_DOWN = S
+GO_LEFT = A
+GO_LEFT = D
+ITEM_A = J
+ITEM_B = K
+ITEM_C = L
+ITEM_D = ;
