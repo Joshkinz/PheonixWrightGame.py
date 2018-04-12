@@ -7,6 +7,11 @@ gameLoop = True
 #The clock will be used to control how fast the screen updates
 clock = pygame.Time.Clock()
 
+#Initialize the game.
+pygame.init() #Initializes game engine
+width, height = 700, 500 #Sets window width and height
+screen = pygame.display.set_mode((width, height)) #Draws window
+
 #--------Main Loop--------
 while gameLoop:
 	#----Main event loop
