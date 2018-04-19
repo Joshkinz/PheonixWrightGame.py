@@ -17,6 +17,10 @@ keys = [False, False, False, False, False, False]
 phoenixSprite = pygame.image.load("resources/phoenix-sprite-A.png").convert()
 playerXPos = 50
 playerYPos = 650
+object1Sprite = pygame.image.load("resources/object-sprite-1.png").convert()
+object2Sprite = pygame.image.load("resources/object-sprite-2.png").convert()
+object3Sprite = pygame.image.load("resources/object-sprite-3.png").convert()
+objectSpeed = 7
 
 #The clock will be used to control how fast the screen updates
 clock = pygame.Time.Clock()
@@ -69,13 +73,29 @@ while gameLoop:
 			keys[1] = False #Reset the keypress
 			
 	if keys[2] = True:
-		objectXPos = 50
-		objectYPos = playerYPos
-		
+		object1XPos = 50
+		object1YPos = playerYPos
+		playerObject1 = True
 		
 	#----Drawing code
 	
-	screen.fill(255, 255, 255) #Clear the screen before drawing it again	
+	screen.fill(255, 255, 255) #Clear the screen before drawing it again
+	screen.blit(phoenixSprite, (playerXPos, playerYPos))
+	if playerObject1 = True:
+		object1XPos += objectSpeed
+		screen.blit(object1Sprite, (50, playerYPos))
+		if object1XPos > 450:
+			playerObject1 = False
+	if playerObject2 = True:
+		object2XPos += objectSpeed
+		screen.blit(object2Sprite, (50, playerYPos))
+		if object3XPos > 450:
+			playerObject1 = False
+	f playerObject3 = True:
+		object3XPos += objectSpeed
+		screen.blit(object3Sprite, (50, playerYPos))
+		if object3XPos > 450:
+			playerObject1 = False
 	pygame.display.flip() #Update the display
 	
 	#----FPS Limit
